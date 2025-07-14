@@ -2,10 +2,11 @@
 const rows=document.querySelectorAll(".dabbas");
 let Currows=0;
 let Word="";
-const correctword="SUNNY";
+
+const correctword="PETER";
+
 let visited="";
 let Gamerunning=true;
-// let Guess="";
 const Enterbtn=document.getElementById("Enterbtn");
 const UserIP=document.getElementById("UserIP");
 const Output=document.getElementById("output");
