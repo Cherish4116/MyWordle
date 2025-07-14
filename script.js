@@ -10,7 +10,7 @@ const Output=document.getElementById("output");
 const allboxes=document.querySelectorAll(".dabba1");
 Enterbtn.addEventListener("click",()=>{
     
-    const correctword="SUNNY";
+const correctword="SUNNY";
     
     if (!Gamerunning) {
         Output.classList.add("errorbar");
