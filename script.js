@@ -3,7 +3,7 @@ const rows=document.querySelectorAll(".dabbas");
 let Currows=0;
 let Word="";
 
-const correctword="PETER";
+const correctword="SUNNY";
 
 let visited="";
 let Gamerunning=true;
@@ -55,7 +55,6 @@ if (!/^[A-Za-z]{5}$/.test(rawInput)) {
 
         boxes[i].classList.add("animate-flip");
 
-// Optional: remove the class after animation ends (so you can reapply later)
 setTimeout(() => {
   boxes[i].classList.remove("animate-flip");
 }, 400);
@@ -67,7 +66,6 @@ setTimeout(() => {
     UserIP.value="";
     Output.textContent="";
     Output.classList.remove("errorbar");
-    console.log(Word);
     if(Word===correctword){
         Output.classList.add("errorbar");
         Output.textContent="You have guessed the word!";
