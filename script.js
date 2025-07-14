@@ -2,9 +2,6 @@
 const rows=document.querySelectorAll(".dabbas");
 let Currows=0;
 let Word="";
-
-const correctword="PETER";
-
 let visited="";
 let Gamerunning=true;
 const Enterbtn=document.getElementById("Enterbtn");
@@ -12,7 +9,9 @@ const UserIP=document.getElementById("UserIP");
 const Output=document.getElementById("output");
 const allboxes=document.querySelectorAll(".dabba1");
 Enterbtn.addEventListener("click",()=>{
-
+    
+    const correctword="SUNNY";
+    
     if (!Gamerunning) {
         Output.classList.add("errorbar");
         Output.textContent = "Game over! Click reset to try again.";
