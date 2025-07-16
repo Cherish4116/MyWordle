@@ -1,5 +1,21 @@
 const rows = document.querySelectorAll(".dabbas");
 let Currows = 0;
+    const wordList = [
+  "apple", "grape", "brave", "crane", "flame", "blush", "cabin", "charm", "climb", "craft",
+  "creak", "drink", "doubt", "draft", "elbow", "equal", "fancy", "feast", "flock", "glide",
+  "glove", "grind", "habit", "harsh", "haunt", "ideal", "ivory", "jolly", "judge", "knife",
+  "knock", "lemon", "latch", "lunar", "mango", "march", "match", "moist", "noble", "ocean",
+  "piano", "plant", "plaza", "pride", "quake", "quiet", "quick", "raven", "reach", "rider",
+  "risky", "rough", "saint", "scale", "shine", "shout", "siren", "skate", "slope", "smile",
+  "spice", "spike", "stack", "stamp", "steal", "storm", "sugar", "swirl", "table", "tango",
+  "teeth", "thank", "thief", "tight", "tiger", "toast", "trace", "trail", "trend", "trick",
+  "truth", "twist", "unite", "urban", "vague", "vital", "vocal", "wheat", "whirl", "widen",
+  "wrist", "wound", "yeast", "yield", "zebra", "pearl", "zonal", "bloom", "chase", "dwell",
+  "grasp", "hinge", "jumpy", "nudge", "punch", "swoop", "sword", "grain", "false", "ethos",
+  "jumbo"
+];
+let correctword = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
+
 let Gamerunning = true;
 let isAnimating = false;
 const Enterbtn = document.getElementById("Enterbtn");
@@ -8,26 +24,25 @@ const Output = document.getElementById("output");
 const allboxes = document.querySelectorAll(".dabba1");
 Enterbtn.addEventListener("click", () => {
     if (isAnimating) return;
-
-    const correctword = "CRAFT";
-
-    if (!Gamerunning) {
-        Output.classList.add("errorbar");
-        Output.textContent = "Game over! Click reset to try again.";
-        return;
-    }
-
     if (Currows >= 6) {
         Output.classList.add("errorbar");
         Output.textContent = "No Guesses left. Click reset to try again.";
         Gamerunning = false;
         return;
     }
+
+    if (!Gamerunning) {
+        Output.classList.add("errorbar");
+        Output.textContent = "Game over! Click reset to try again.";
+
+        return;
+    }
+
     let rawInput = UserIP.value;
     let Guess = rawInput.toUpperCase();
     if (!/^[A-Za-z]{5}$/.test(rawInput)) {
         Output.classList.add("errorbar");
-        Output.textContent = "Please enter a valid 5-letter word (letters only, no spaces)";
+        Output.textContent = "Please enter a valid 5-letter word ";
         return;
     }
 
@@ -83,11 +98,17 @@ Enterbtn.addEventListener("click", () => {
 
         setTimeout(() => {
             Currows++;
+                if(Currows == 6){
+                Output.classList.add("errorbar");
+                Output.textContent = `The word was ${correctword}`;
+                Gamerunning=false;
+    }
             if (Guess === correctword) {
                 Output.classList.add("errorbar");
                 Output.textContent = "You have guessed the word!";
                 Gamerunning = false;
             }
+
             isAnimating = false;
             UserIP.focus();
         }, 5 * 200 + 100);
@@ -108,11 +129,11 @@ function Reset() {
         box.classList.replace("Noletter", "dabba1");
         box.textContent = "";
     })
+
     Gamerunning = true;
     UserIP.value = "";
     Output.textContent = "";
     Output.classList.remove("errorbar");
-    Word = "";
-    visited = "";
+    correctword = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
     Currows = 0;
 }
