@@ -1,5 +1,10 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  /* background-color: #0582CA; */
+  /* background-color: #8A817C; */
+  /* background-color: #00a5e0; */
+  /* background-color: #003049; */
+  /* background-color: #1d3557; */
   background-color: #4a5759;
 }
 
@@ -8,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* border:0.2vw solid black; */
 
 }
 
@@ -20,7 +26,13 @@ body {
   justify-content: center;
   width: 35vw;
   max-height: 95vh;
+  /* border:0.2vw solid black; */
   border-radius: 0.8cm;
+  /* background-color: #00A6FB; */
+  /* background-color: #BCB8B1; */
+  /* background-color: #32cbff; */
+  /* background-color: #669bbc; */
+  /* background-color: #457b9d; */
   background-color: #b0c4b1;
   box-shadow: 0.2vw 0.2vw 0.3vw 0.3vw rgba(0, 0, 0, 0.356);
   height: auto;
@@ -37,6 +49,7 @@ h2 {
   padding: 0.2vw;
   margin-top: 1vh;
   margin-bottom: 1vh;
+  /* font-family:'Courier New', Courier, monospace; */
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -51,10 +64,13 @@ h2 {
 .dabba1 {
   width: 3.5vw;
   height: 3.5vw;
+  /* background-color: white; */
+  /* background-color: #00A6FB; */
   background-color: #F4F3EE;
   border-radius: 0.3vw;
   color: black;
   transition: background-color 0.3s ease, color 0.3s ease;
+  /* transition: background-color 0.5s ease, color 0.5s ease; */
   border: 0.2vw solid rgba(0, 0, 0, 0.503);
   display: flex;
   align-items: center;
@@ -174,6 +190,9 @@ h2 {
   margin: 0.2vw;
 }
 
+/* .Guessbar{
+    margin-top:0.5vw;
+    } */
 .Wrongplace {
   background-color: rgb(206, 196, 19);
   color: white;
