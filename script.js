@@ -9,7 +9,7 @@ const allboxes = document.querySelectorAll(".dabba1");
 Enterbtn.addEventListener("click", () => {
     if (isAnimating) return;
 
-    const correctword = "SUNNY";
+    const correctword = "CRAFT";
 
     if (!Gamerunning) {
         Output.classList.add("errorbar");
