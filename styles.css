@@ -1,146 +1,225 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #4a5759;
 }
-.whole{
-    margin:auto;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-h2{
-    width:15.3vw;
-    height:10vh;
-    font-size:3vw;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    /* border:0.2vw solid black; */
-    padding:0.2vw;
-    margin-top:0;
-    margin-bottom: 0;
-    /* font-family:'Courier New', Courier, monospace; */
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.dabbas{
-    display:flex;
-    flex-direction: row;
-}
-.dabba1{
-width:4vw;
-height:4vw;
-background-color: white;
-color:black;
-transition: background-color 0.3s ease, color 0.3s ease;
-border:0.2vw solid black;
-display:flex;
-align-items: center;
-justify-content: center;
-font-size:2vw;
-overflow:hidden;
-margin:0.2vw;
+
+.whole {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
-#UserIP{
-    margin:2vw;
-    width:18vw;
-    height:5vh;
-    margin-right:0;
-    margin-left:0.2vw;
-    margin-bottom:1vw;
-   border-radius:0.2vw;
+
+.decor {
+  margin: 1vh;
+  margin-top: 1.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35vw;
+  max-height: 95vh;
+  border-radius: 0.8cm;
+  background-color: #b0c4b1;
+  box-shadow: 0.2vw 0.2vw 0.3vw 0.3vw rgba(0, 0, 0, 0.356);
+  height: auto;
 }
-#Enterbtn{
-    margin:0vw;
-    height:5.5vh;
-    width:4.5vw;
-    /* border:0.2vw solid black; */
-    font-weight:bold;
-    background-color: hsl(200, 100%, 1%);
-    color:white;
-    cursor:pointer;
-    border-radius:0.5vw;
+
+h2 {
+  width: 15.3vw;
+  height: 10vh;
+  font-size: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border:0.2vw solid black; */
+  padding: 0.2vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-#Enterbtn:hover,#Resetbtn:hover{
-        background-color: hsl(0, 0%, 16%);
+
+.dabbas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
-#Enterbtn:active,#Resetbtn:active{
-       background-color: hsl(0, 0%, 22%);   
+
+.dabba1 {
+  width: 3.5vw;
+  height: 3.5vw;
+  background-color: #F4F3EE;
+  border-radius: 0.3vw;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 0.2vw solid rgba(0, 0, 0, 0.503);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  overflow: hidden;
+  margin: 0.2vw;
+  box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw rgba(128, 128, 128, 0.425);
 }
-#Resetbtn{
-    margin:0vw;
-    height:5.5vh;
-    width:4.5vw;
-    /* border:0.2vw solid black; */
-    font-weight:bold;
-    background-color: hsl(200, 100%, 1%);
-    color:white;
-    cursor:pointer;
-    border-radius:0.5vw;
+
+#UserIP {
+  margin: 2vw;
+  width: 15.5vw;
+  height: 5vh;
+  margin-right: 0;
+  margin-left: 0.2vw;
+  margin-bottom: 1vw;
+  /* border:0.2vw solid rgba(128, 128, 128, 0.1); */
+  border: 0.2vw solid rgba(255, 255, 255, 0.258);
+  border-radius: 0.6vw;
+  background-color: #F4F3EE;
+  box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.341);
+  padding: 0 0 0 0.5vw;
 }
-.errorbar{
-     width:22.5vw;
-    height:10vh;
-    font-size:1.5vw;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    /* border:0.2vw solid black; */
-    padding:0.2vw;
-    margin-top:0;
-    margin-bottom: 0;
-    font-weight:bold;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+#UserIP:focus {
+  background-color: #F4F3EE;
+  box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.341);
+  border: 0.2vw solid rgba(255, 255, 255, 0.258);
+  padding: 0 0 0 0.5vw;
+  outline: none;
 }
-.Noletter{
-    background-color: rgb(69, 69, 69);
-    color:white;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    width:4vw;
-    height:4vw;
-    border:0.2vw solid rgb(69, 69, 69);
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    font-size:2vw;
-    overflow:hidden;
-    margin:0.2vw;
+
+#Enterbtn {
+  margin: 0vw;
+  height: 5.5vh;
+  width: 4.5vw;
+  /* border:0.2vw solid black; */
+  font-weight: bold;
+  /* background-color: hsl(200, 100%, 1%); */
+  background-color: #780000;
+  border: 0.2vw solid hsla(0, 100%, 24%, 0.51);
+  color: #F4F3EE;
+  cursor: pointer;
+  border-radius: 0.7vw;
+  box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.341);
+  text-align: center;
+
 }
-.Wrongplace{
-       background-color: rgb(206, 196, 19);
-    color:white;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    width:4vw;
-    height:4vw;
-    border:0.2vw solid rgb(206, 196, 19);
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    font-size:2vw;
-    overflow:hidden;
-    margin:0.2vw; 
+
+#Enterbtn:hover,
+#Resetbtn:hover {
+  background-color: hsl(0, 100%, 30%);
+  border: 0.2vw solid hsla(0, 100%, 30%, 0.336);
+  box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.341);
 }
-.Rightplace{
-    background-color:rgb(87, 165, 24);
-    color:white;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    width:4vw;
-    height:4vw;
-    border:0.2vw solid rgb(87, 165, 24);
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    font-size:2vw;
-    overflow:hidden;
-    margin:0.2vw; 
+
+#Enterbtn:active,
+#Resetbtn:active {
+  background-color: hsl(0, 100%, 38%);
+  border: 0.2vw solid hsla(0, 100%, 38%, 0.336);
+  box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.341);
+}
+
+#Resetbtn {
+  margin: 0vw;
+  height: 5.5vh;
+  width: 4.5vw;
+  /* border:0.2vw solid black; */
+  font-weight: bold;
+  /* background-color: hsl(200, 100%, 1%);
+     */
+  background-color: #780000;
+  border: 0.2vw solid hsla(0, 100%, 24%, 0.51);
+  color: #F4F3EE;
+  cursor: pointer;
+  border-radius: 0.7vw;
+  margin-bottom: 1.5vw;
+  margin-top: 1vw;
+  /* border:none; */
+  box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.341);
+  text-align: center;
+
+}
+
+.errorbar {
+  width: 29vw;
+  height: 7vh;
+  font-size: 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border:0.2vw solid black; */
+  padding: 0.2vw;
+  margin-top: 0vh;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Noletter {
+  background-color: rgb(69, 69, 69);
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* transition: background-color 0.5s ease, color 0.5s ease; */
+  width: 3.5vw;
+  height: 3.5vw;
+  border: 0.2vw solid rgb(69, 69, 69);
+  border-radius: 0.3vw;
+  /* box-shadow:0.1vw 0.1vw 0.1vw 0.1vw rgba(128, 128, 128, 0.425); */
+  border: 0.2vw solid rgba(128, 128, 128, 0.248);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  overflow: hidden;
+  margin: 0.2vw;
+}
+
+.Wrongplace {
+  background-color: rgb(206, 196, 19);
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* transition: background-color 0.5s ease, color 0.5s ease; */
+  width: 3.5vw;
+  height: 3.5vw;
+  /* border:0.2vw solid rgb(206, 196, 19); */
+  border: 0.2vw solid rgba(128, 128, 128, 0.248);
+  border-radius: 0.3vw;
+  box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw rgba(128, 128, 128, 0.425);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  overflow: hidden;
+  margin: 0.2vw;
+}
+
+.Rightplace {
+  background-color: rgb(87, 165, 24);
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* transition: background-color 0.5s ease, color 0.5s ease; */
+  width: 3.5vw;
+  height: 3.5vw;
+  border: 0.2vw solid rgba(128, 128, 128, 0.248);
+  border-radius: 0.3vw;
+  box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw rgba(128, 128, 128, 0.425);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  overflow: hidden;
+  margin: 0.2vw;
 }
 
 @keyframes flip {
   0% {
     transform: rotateX(0deg);
   }
+
   50% {
     transform: rotateX(90deg);
   }
+
   100% {
     transform: rotateX(0deg);
   }
@@ -151,4 +230,128 @@ margin:0.2vw;
   transform-origin: center;
   transform-style: preserve-3d;
   backface-visibility: hidden;
+}
+
+@media only screen and (max-width:1024px) {
+  .decor {
+    width: 80vw;
+    height: auto;
+    padding: 2vw;
+  }
+
+  h2 {
+    font-size: 7vw;
+    width: 60vw;
+    ;
+  }
+
+  .dabba1,
+  .Noletter,
+  .Wrongplace,
+  .Rightplace {
+    width: 10vw;
+    height: 10vw;
+    font-size: 5vw;
+    margin: 0.6vw;
+    border-radius: 0.8vw;
+
+  }
+
+  #UserIP,
+  #UserIP:focus {
+    width: 41vw;
+    padding-left: 2vw;
+    border-radius: 1vw;
+    /* height:6vh; */
+    /* font-size: 2vw; */
+  }
+
+  #Enterbtn,
+  #Resetbtn,
+  #Enterbtn:hover,
+  #Resetbbtn:hover,
+  #Enterbtn:active,
+  #Resetbtn:active {
+    width: 12vw;
+    border-radius: 3 vw;
+    margin-top: 3vw;
+    text-align: center;
+
+  }
+
+  .Guessbar {
+    margin-top: 3vw;
+  }
+
+  .errorbar {
+    font-size: 3.5vw;
+    width: 80vw;
+    margin: 2vh 0;
+    height: 10vh;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .decor {
+    width: 85vw;
+    height: auto;
+    padding: 2vw;
+  }
+
+  h2 {
+    font-size: 9vw;
+    width: 80vw;
+  }
+
+  .dabba1,
+  .Noletter,
+  .Wrongplace,
+  .Rightplace {
+    width: 11vw;
+    height: 11vw;
+    font-size: 6.5vw;
+    margin: 0.6vw;
+    border-radius: 1.2vw;
+    border: 0.5vw solid rgba(128, 128, 128, 0.425);
+  }
+
+  #UserIP,
+  #UserIP:focus {
+    /* width: 60vw; */
+
+    width: 44vw;
+    /* height:5vh; */
+    border-radius: 1.3vw;
+  }
+
+  #Enterbtn,
+  #Resetbtn,
+  #Enterbtn:hover,
+  #Resetbbtn:hover,
+  #Enterbtn:active,
+  #Resetbtn:active {
+    width: 19vw;
+    /* height:5.5vh; */
+    border-radius: 3vw;
+    margin: 2vw;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .Guessbar {
+    margin-top: 7vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: center;
+    margin-right: center;
+    /* border:0.5vw solid black; */
+  }
+
+  .errorbar {
+    font-size: 4.5vw;
+    width: 90vw;
+    margin: 2vh 0;
+    height: 5vh;
+  }
 }
