@@ -11,7 +11,7 @@ const wordList = [
     "teeth", "thank", "thief", "tight", "tiger", "toast", "trace", "trail", "trend", "trick",
     "truth", "twist", "unite", "urban", "vague", "vital", "vocal", "wheat", "whirl", "widen",
     "wrist", "wound", "yeast", "yield", "zebra", "pearl", "zonal", "bloom", "chase", "dwell",
-    "grasp", "hinge", "jumpy", "nudge", "punch", "swoop", "jumbo", "grain", "ethos", "false",
+    "grasp", "hinge", "jumpy", "nudge", "punch", "swoop", "jumbo", "grain", "ethos", "false"
 ];
 let correctword = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
 let Gamerunning = true;
